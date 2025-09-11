@@ -1,4 +1,4 @@
-import { BookOpen, ChevronRight, Home, Eye } from 'lucide-react';
+import { BookOpen, ChevronRight, Home, Eye, Key, Lock, User } from 'lucide-react';
 import { Section } from '@/types';
 import { sections } from '@/data/sections';
 
@@ -17,14 +17,11 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
             <span>The Sacred Codex</span>
           </h1>
           
-          {/* Third Eye and Holy Chrism elements - non-clickable and close to title */}
           <div className="flex gap-3">
-            {/* Third Eye - icon only */}
             <div className="p-1 text-amber-400">
               <Eye size={20} />
             </div>
             
-            {/* Holy Chrism - text only (icon removed) */}
             <div className="text-amber-300 text-sm flex items-center">
               Holy Chrism
             </div>
@@ -58,15 +55,27 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
                     : 'hover:bg-amber-900/10 hover:text-amber-200'
                 }`}
               >
-                <ChevronRight size={18} className="flex-shrink-0" />
-                <span>{section.title}</span>
+                {section.id === 'secret-chapter' ? (
+                  <div className="flex items-center justify-center w-full gap-1">
+                    <Lock size={14} className="text-amber-400" />
+                    <Key size={14} className="text-amber-400" />
+                  </div>
+                ) : section.id === 'five-senses' ? (
+                  <div className="flex items-center justify-center w-full gap-1">
+                    <User size={16} className="text-amber-400" />
+                  </div>
+                ) : (
+                  <>
+                    <ChevronRight size={18} className="flex-shrink-0" />
+                    <span>{section.title}</span>
+                  </>
+                )}
               </button>
             </li>
           ))}
         </ul>
       </nav>
       
-      {/* New Third Eye and Date Calculator Link */}
       <div className="p-4 border-t border-amber-800/50">
         <a 
           href="https://hc-date-calculator.watchermind.online/" 
