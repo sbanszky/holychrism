@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-amber: #d97706;
+  --color-gold: #d4af37;
+  --color-silver: #c0c0c0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cinzel', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #000022; /* Solid deep blue background */
+  color: #fbbf24;
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(17, 24, 39, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(217, 119, 6, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.7);
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+/* Decorative elements */
+.decorative-border {
+  position: relative;
+}
+
+.decorative-border::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to-right, transparent, rgba(217, 119, 6, 0.3), transparent);
+}
+
+.decorative-border::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(to-right, transparent, rgba(217, 119, 6, 0.3), transparent);
+}
+
+/* Prose styles for content */
+.prose p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.prose strong {
+  font-weight: 600;
+}
+
+/* Egyptian Glow Animation */
+@keyframes egyptian-glow {
+  0%, 100% { 
+    opacity: 0.7;
+    filter: drop-shadow(0 0 5px rgba(217, 119, 6, 0.6));
+  }
+  50% { 
+    opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(217, 119, 6, 0.8));
+  }
+}
+
+.animate-egyptian-glow {
+  animation: egyptian-glow 3s ease-in-out infinite;
+}
+
+/* Black button with gold text */
+.btn-black-gold {
+  background: linear-gradient(145deg, #111, #000);
+  color: var(--color-gold);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.btn-black-gold:hover {
+  background: linear-gradient(145deg, #222, #111);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+  color: #d4af37;
+}
+
+.btn-black-gold:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
