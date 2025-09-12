@@ -92,7 +92,7 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
         </a>
       </div>
       
-      <div className="p-4 text-xs text-amber-700 border-t border-amber-800/50 text-center">
+      <div className="p-4 text-xs text-amber-700 border-t border-amber-800/50 flex justify-center">
         <p>© {new Date().getFullYear()} The Sacred Codex</p>
       </div>
     </aside>

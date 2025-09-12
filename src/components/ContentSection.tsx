@@ -30,9 +30,8 @@ export default function ContentSection({ section, setCurrentSection }: ContentSe
       <Button 
         onClick={() => setCurrentSection(null)}
         variant="ghost"
-        className="fixed bottom-6 right-6 text-amber-400 hover:bg-amber-900/30 z-50 flex items-center shadow-lg bg-black/50 backdrop-blur-sm"
-      >
-        <ChevronLeft className="mr-2" /> Back to Contents
+        className="fixed bottom-6 right-6 text-amber-400 hover:bg-amber-900/30 z-50 flex items-center shadow-lg bg-black/50 backdrop-blur-sm"h      >
+        <ChevronLeft className="mr-2" /> Back to the beginninsg
       </Button>
     </article>
   );
