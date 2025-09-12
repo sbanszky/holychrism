@@ -16,7 +16,11 @@ const epilogue: Section = {
         practices align posture, nutrition, journaling, meditation, and sensory engagement. Communities of
         anointed humans create networks of coherence, clarity, and alignment.
       </p>
-      <!-- Rest of content remains unchanged -->
+      <p class="mb-4">
+        The inner anointing is humanity’s hidden variable: a conscious system of self-alignment, preservation of
+        clarity, and integration of intuition and intelligence. The world transforms when its humans reclaim
+        awareness, bridging the material, temporal, and spiritual with deliberate practice and presence.
+      </p>
     </div>
   `
 };

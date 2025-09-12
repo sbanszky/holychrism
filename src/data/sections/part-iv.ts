@@ -2,7 +2,7 @@ import { Section } from '@/types';
 
 const partIV: Section = {
   id: 'part-iv',
-  title: 'Part IV – The Path to Inner Illumination',
+  title: 'Part IV – The Triple Anointing',
   content: `
     <div class="py-8">
       <div class="flex justify-center mb-6">
@@ -13,7 +13,17 @@ const partIV: Section = {
       <p class="mb-4">
         The Triple Anointing layers the Earth, Moon, and Spirit to create a living temple:
       </p>
-      <!-- Rest of content remains unchanged -->
+      <ul class="list-disc pl-8 mb-4 space-y-2">
+        <li><span class="font-semibold">Earth:</span> Oils and herbs awaken pathways in the nervous system, stimulating courage, focus, and nourishment.</li>
+        <li><span class="font-semibold">Moon:</span> Lunar cycles guide inner secretion, timing meditation, journaling, and reflection.</li>
+        <li><span class="font-semibold">Spirit:</span> The inner chrism pulses with neurochemical and subtle resonance, elevating perception and insight.</li>
+      </ul>
+      <p class="mb-4">
+        Integration is a practice: aligning rituals with lunar timing, using herbs and oils intentionally, cultivating
+        virtues, and maintaining posture and breath awareness. The human becomes a conscious node, a priest of
+        their own neural cathedral, synchronizing inner processes with cosmic rhythm. The Triple Anointing is a
+        protocol for evolution, an operational system for body, mind, and spirit.
+      </p>
     </div>
   `
 };
