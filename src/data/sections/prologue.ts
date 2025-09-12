@@ -17,7 +17,18 @@ const prologue: Section = {
         cosmos. In an age dominated by technology and artificial intelligence, this force has been forgotten. Yet, it
         is still alive, waiting for attention, preservation, and conscious cultivation.
       </p>
-      <!-- Rest of content remains unchanged -->
+      <p class="mb-4">
+        This book is a map, a guide, and a teaching. It is neither bound to religion nor limited to tradition. It is for
+        every human being, for every mind seeking to awaken to the hidden potential within. Here, the wisdom of
+        oils, lunar cycles, herbs, and the sacred fire of the Sun converge, revealing a practice for self-alignment,
+        awareness, and evolution.
+      </p>
+      <p class="mb-4">
+        Through these pages, you will journey inward, learning to navigate the cycles of the Moon, the fragrances
+        of the Earth, and the hidden currents of your own inner chemistry. You will explore the Triple Anointing, the
+        path that transforms routine life into conscious ritual. And finally, you will touch the hidden Sun within—the
+        force that can burn brighter than any external light, a fire that fuels creativity, insight, and presence.
+      </p>
     </div>
   `
 };
