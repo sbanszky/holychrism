@@ -29,6 +29,13 @@ const prologue: Section = {
         path that transforms routine life into conscious ritual. And finally, you will touch the hidden Sun within—the
         force that can burn brighter than any external light, a fire that fuels creativity, insight, and presence.
       </p>
+      <div class="flex justify-center mt-8">
+        <img 
+          src="https://images.watchermind.online/lotusSilueteMoon.jpeg" 
+          alt="Lotus Silhouette with Moon" 
+          class="rounded-lg shadow-lg max-w-full h-auto max-h-[400px]"
+        />
+      </div>
     </div>
   `
 };
