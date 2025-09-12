@@ -41,7 +41,7 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
               }`}
             >
               <Home size={18} className="flex-shrink-0" />
-              <span>Title Page</span>
+              <span>The beginning</span>
             </button>
           </li>
           
@@ -92,7 +92,7 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
         </a>
       </div>
       
-      <div className="p-4 text-xs text-amber-700 border-t border-amber-800/50">
+      <div className="p-4 text-xs text-amber-700 border-t border-amber-800/50 text-center">
         <p>© {new Date().getFullYear()} The Sacred Codex</p>
       </div>
     </aside>
