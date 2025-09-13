@@ -16,8 +16,18 @@ function App() {
         <div className="relative z-10 max-w-4xl mx-auto">
           {!currentSection ? (
             <TitlePage setCurrentSection={setCurrentSection} />
+          ) : section ? (
+            <ContentSection section={section} setCurrentSection={setCurrentSection} />
           ) : (
-            <ContentSection section={section!} setCurrentSection={setCurrentSection} />
+            <div className="text-center py-12">
+              <h2 className="text-2xl font-bold text-amber-300">Section not found</h2>
+              <button 
+                onClick={() => setCurrentSection(null)}
+                className="mt-4 px-4 py-2 bg-amber-900/30 text-amber-200 rounded hover:bg-amber-900/50 transition"
+              >
+                Return to the beginning
+              </button>
+            </div>
           )}
         </div>
       </main>

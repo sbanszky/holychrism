@@ -7,6 +7,8 @@ import epilogue from './epilogue';
 import secretChapter from './secret-chapter';
 import fiveSenses from './five-senses';
 import beyondFive from './beyond-five';
+import xxxiii from './xxxiii';
+import signature from './signature';
 
 const sections = [
   prologue,
@@ -17,7 +19,9 @@ const sections = [
   epilogue,
   secretChapter,
   fiveSenses,
-  beyondFive
+  beyondFive,
+  xxxiii,
+  signature
 ];
 
 export { sections };
