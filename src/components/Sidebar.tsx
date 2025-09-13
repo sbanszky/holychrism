@@ -1,4 +1,4 @@
-import { BookOpen, ChevronRight, Home, Eye, Key, Lock, User } from 'lucide-react';
+import { BookOpen, ChevronRight, Home, Eye, Key, Lock, User, Star } from 'lucide-react';
 import { Section } from '@/types';
 import { sections } from '@/data/sections';
 
@@ -63,6 +63,12 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
                 ) : section.id === 'five-senses' ? (
                   <div className="flex items-center justify-center w-full gap-1">
                     <User size={16} className="text-amber-400" />
+                  </div>
+                ) : section.id === 'beyond-five' ? (
+                  <div className="flex items-center justify-center w-full gap-1">
+                    <Star size={14} className="text-amber-400" />
+                    <Star size={14} className="text-amber-400" />
+                    <Star size={14} className="text-amber-400" />
                   </div>
                 ) : (
                   <>

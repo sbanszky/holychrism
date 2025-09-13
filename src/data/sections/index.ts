@@ -6,6 +6,7 @@ import partIV from './part-iv';
 import epilogue from './epilogue';
 import secretChapter from './secret-chapter';
 import fiveSenses from './five-senses';
+import beyondFive from './beyond-five';
 
 const sections = [
   prologue,
@@ -15,7 +16,8 @@ const sections = [
   partIV,
   epilogue,
   secretChapter,
-  fiveSenses
+  fiveSenses,
+  beyondFive
 ];
 
 export { sections };
