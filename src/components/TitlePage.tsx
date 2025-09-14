@@ -81,6 +81,13 @@ export default function TitlePage({ setCurrentSection }: TitlePageProps) {
           />
         </div>
       </div>
+      
+      {/* Typoglycemia Footer */}
+      <div className="mt-16 pt-8 border-t border-amber-800/30">
+        <p className="text-sm text-amber-200/60 italic">
+          If Yuo're Albe to Raed Tihs, You Might Have Typoglycemia.
+        </p>
+      </div>
     </div>
   );
 }
