@@ -72,6 +72,14 @@ const signature: Section = {
         <div>e v e r y w h e r e</div>
       </div>
       
+      <div class="flex justify-center my-8">
+        <img 
+          src="https://images.watchermind.online/signature.png" 
+          alt="Signature" 
+          class="max-w-xs opacity-90"
+        />
+      </div>
+      
       <div class="mt-12 pt-4 border-t border-amber-800/50 text-sm text-amber-500">
         <p>If Yuo’re Albe to Raed Tihs, You Might Have Typoglycemia.</p>
       </div>

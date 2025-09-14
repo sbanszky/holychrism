@@ -1,6 +1,23 @@
 import { Section } from '@/types';
 import { senses } from '@/data/senses';
 
+// Function to generate distinct colors for numerals
+const generateColors = (count: number) => {
+  const colors = [];
+  for (let i = 0; i < count; i++) {
+    const hue = Math.floor((i * 360) / count);
+    colors.push(`hsl(${hue}, 70%, 60%)`);
+  }
+  return colors;
+};
+
+const romanNumerals = [
+  'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X',
+  'XI', 'XII', 'XIII', 'XIV', 'XV', 'XVI', 'XVII', 'XVIII', 'XIX', 'XX',
+  'XXI', 'XXII', 'XXIII', 'XXIV', 'XXV', 'XXVI', 'XXVII', 'XXVIII', 'XXIX', 'XXX',
+  'XXXI', 'XXXII', 'XXXIII'
+];
+
 const xxxiii: Section = {
   id: 'xxxiii',
   title: 'XXXIII',
@@ -46,9 +63,20 @@ const xxxiii: Section = {
         <div class="mt-16">
           <h2 class="text-3xl font-bold text-amber-300 mb-8 text-center">The 33 Senses</h2>
           
-          ${senses.reduce((html, sense) => {
-            return html + sense.content;
-          }, '')}
+          <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+            ${senses.reduce((html, sense, index) => {
+              const color = generateColors(33)[index];
+              const numeral = romanNumerals[index];
+              return html + `
+                <div class="flex items-start bg-amber-900/20 p-6 rounded-xl border border-amber-800/30 shadow-lg">
+                  <span class="text-2xl font-bold mr-4 mt-1 min-w-[3rem] text-center" style="color: ${color}">${numeral}</span>
+                  <div class="prose prose-invert max-w-none text-[120%] text-justify">
+                    ${sense.content}
+                  </div>
+                </div>
+              `;
+            }, '')}
+          </div>
         </div>
       </div>
     </div>

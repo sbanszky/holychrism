@@ -68,6 +68,18 @@ export default function TitlePage({ setCurrentSection }: TitlePageProps) {
           </h2>
           <div className="mt-2 w-32 h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto"></div>
         </div>
+        
+        {/* Signature Image - Clickable */}
+        <div 
+          className="mt-8 w-full max-w-[10rem] mx-auto cursor-pointer hover:opacity-90 transition-opacity"
+          onClick={() => setCurrentSection('signature')}
+        >
+          <img 
+            src="https://images.watchermind.online/signature.png" 
+            alt="Signature" 
+            className="w-full h-auto object-contain"
+          />
+        </div>
       </div>
     </div>
   );
