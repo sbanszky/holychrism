@@ -6,7 +6,7 @@ const signature: Section = {
   content: `
     <div class="text-center font-mono text-amber-300 leading-relaxed text-lg">
       <div class="mb-8">
-        <div class="text-2xl mb-4">n̶o̶ ̶o̶n̶e̶ ̶f̶r̶o̶m̶ ̶n̶o̶ ̶w̶h̶e̶r̶e̶</div>
+        <div class="text-2xl mb-4">n̶o̶On̶e̶Fr̶o̶m̶Now̶h̶e̶r̶e̶</div>
         <div>...b r n</div>
         <div>fr̸o̸m̸  s i l e n c e . . .</div>
       </div>
