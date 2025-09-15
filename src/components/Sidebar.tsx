@@ -1,13 +1,18 @@
 import { BookOpen, ChevronRight, Home, Eye, Key, Lock, User, Star, Brain, Heart, Globe } from 'lucide-react';
-import { Section } from '@/types';
+import { SectionId } from '@/routing/sections';
+import { SECTION_TITLES } from '@/routing/sections';
 import { sections } from '@/data/sections';
 
 type SidebarProps = {
-  currentSection: string | null;
-  setCurrentSection: (id: string | null) => void;
+  currentSection: SectionId;
+  navigateToSection: (id: SectionId) => void;
 };
 
-export default function Sidebar({ currentSection, setCurrentSection }: SidebarProps) {
+export default function Sidebar({ currentSection, navigateToSection }: SidebarProps) {
+  const absUrl = (id: SectionId) => {
+    return `${window.location.origin}${window.location.pathname}#${id}`;
+  };
+
   return (
     <aside className="w-64 bg-black/30 backdrop-blur-sm border-r border-amber-800/50 flex flex-col h-full">
       <div className="p-6 border-b border-amber-800/50">
@@ -32,23 +37,31 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
       <nav className="flex-1 overflow-y-auto py-4">
         <ul className="space-y-1 px-4">
           <li>
-            <button 
-              onClick={() => setCurrentSection(null)}
+            <a 
+              href={absUrl('home')}
+              onClick={(e) => {
+                e.preventDefault();
+                navigateToSection('home');
+              }}
               className={`w-full flex items-center gap-3 p-3 rounded-lg text-left transition-all ${
-                !currentSection 
+                currentSection === 'home' 
                   ? 'bg-amber-900/30 text-amber-200' 
                   : 'hover:bg-amber-900/10 hover:text-amber-200'
               }`}
             >
               <Home size={18} className="flex-shrink-0" />
-              <span>The beginning</span>
-            </button>
+              <span>{SECTION_TITLES.home}</span>
+            </a>
           </li>
           
           {sections.map((section) => (
             <li key={section.id}>
-              <button 
-                onClick={() => setCurrentSection(section.id)}
+              <a 
+                href={absUrl(section.id as SectionId)}
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigateToSection(section.id as SectionId);
+                }}
                 className={`w-full flex items-center gap-3 p-3 rounded-lg text-left transition-all ${
                   currentSection === section.id 
                     ? 'bg-amber-900/30 text-amber-200' 
@@ -84,7 +97,7 @@ export default function Sidebar({ currentSection, setCurrentSection }: SidebarPr
                     <span>{section.title}</span>
                   </>
                 )}
-              </button>
+              </a>
             </li>
           ))}
         </ul>
