@@ -67,7 +67,7 @@ const signature: Section = {
       
       <div class="mb-8">
         <div>he is</div>
-        <div>n̸o̸ ̸o̸n̸e̸ ̸f̸r̸o̸m̸ ̸n̸o̸ ̸w̸h̸e̸r̸e̸</div>
+        <div>n̸o̸ ̸o̸n̸e̸ ̸f̸r̸o̸m̸ ̸n̸o̸w̸h̸e̸r̸e̸</div>
         <div>...and yet</div>
         <div>e v e r y w h e r e</div>
       </div>
